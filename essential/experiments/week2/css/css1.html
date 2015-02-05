@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Experimentation - 1</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+<style>
+p {
+    text-align: left;
+    color: green;
+} 
+
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+.center {
+    text-align: center;
+    color: blue;
+}
+
+p.center {
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: green;
+}
+
+a {
+    text-decoration: none;
+}
+
+#para2 {
+    text-indent: 50px;
+    color: orange;
+}
+
+h3 {
+    letter-spacing: 3px;
+}
+
+h4 {
+    letter-spacing: -3px;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">CSS Experiment - 1</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <p>Every paragraph with the id="para1" will be affected by the style.</p>
+            <p id="para1">CSS Effect</p>
+            <pre>
+                #para1 {
+                text-align: center;
+                color: red;
+                }
+            </pre>
+        </div>
+        <br /><br />
+        <div class="container">
+
+            <p>This paragraph is not affected by the css <mark>ID</mark> style.</p>
+            <pre>
+                 p {
+                 text-align: left;
+                 color: green;
+                 } 
+            </pre>
+        </div>
+        <br /><br />
+        <div class="container">
+            <p class="center">Red and center-aligned paragraph.</p> 
+            <pre>
+                 p.center {
+                    text-align: center;
+                    color: red;
+                 }
+
+            </pre>
+        </div>
+        <br /><br />
+
+        <div class="container">
+            <h1>Hello World!</h1>
+            <h2>Smaller heading!</h2>
+            <pre>
+                 h1, h2 {
+                 text-align: center;
+                 color: green;
+                 }
+            </pre>
+        </div>
+        <br /><br />
+
+        <div class="container">
+            <p>Link to: <a href="http://www.w3schools.com">W3Schools.com</a></p>
+
+            <p id="para2">Microsoft ASP.NET is an example of a family of server-side tools to dynamically generate rich web pages that can change structure and enable data interactions based both on conditions at the time the page is served and on the interactions from the end user. </p>
+
+            <pre>
+                  #para2 {
+                text-indent: 50px;
+                color: orange;
+                }
+            </pre>
+        </div>
+        <br /><br />
+        <div class="container">
+            <h3>This is heading 1</h3>
+            <h4>This is heading 2</h4>
+
+            <pre>
+                   h3 {
+                   letter-spacing: 3px;
+                    }
+                    h4 {
+                    letter-spacing: -3px;
+                    }
+            </pre>
+        </div>
+        <br /><br />
+
+        <div class="container">
+            <h3>Source link:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week2/css/css1.html" target="_blank">Source</a></li>
+
+            </ul>
+        </div>
+
+        <div class="container">
+            <h3>Reference</h3>
+            <ul>
+                <li><a href="http://www.w3schools.com" target="_blank">W3Schools</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

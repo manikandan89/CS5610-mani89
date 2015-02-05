@@ -1,0 +1,8 @@
+../../story/whatisnext.htm?../experiments/week2/story.txt			What is Next?
+../week2/bootstrap/bootstrap1.html											BOOTSTRAP1
+../week2/bootstrap/bootstrap2.html											BOOTSTRAP2
+../week2/bootstrap/bootstrap3.html											BOOTSTRAP3
+../week2/css/css1.html											CSS1
+../week2/css/css2.html											CSS2
+
+

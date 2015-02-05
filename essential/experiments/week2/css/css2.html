@@ -1,0 +1,205 @@
+
+<!doctype html>
+<html>
+<head>
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+                .slidein {
+            -webkit-animation-duration: 3s;
+            -webkit-animation-name: slidein;
+            -webkit-animation-iteration-count: 1;
+        }
+
+
+        @-webkit-keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: auto;
+            position: relative;
+            width: 210px;
+            height: 210px;
+            font-family: Arial, Geneva, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: bold;
+            color: brown;
+            text-decoration: none;
+            border-radius: 1px;
+            padding: 10px;
+            border: 1px solid #999;
+            border: inset 1px solid #333;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        input {
+            width: 200px;
+            display: block;
+            border: 1px solid #999;
+            height: 40px;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #PureText{
+            float:left;
+            font-size:x-large;
+        }
+
+        form{
+            align-content:center;
+            align-items:center;
+        }
+
+        p{            
+            color:blueviolet;
+        }
+
+    </style>
+
+
+    <title>Web Development Project</title>
+
+    
+    <script>
+        function setup() {
+            var e = document.getElementById("LoginBox");
+            e.className = "slidein";
+        }
+    </script>
+</head>
+
+
+<body onload="setup()">
+
+
+
+
+        <div id="LoginBox">
+            <form>
+
+                <div>
+                    <label for="name">Username</label>
+                    <input id="name" type="text" placeholder="Username">
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Password">
+                </div>
+
+                <div>
+                    <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+        <hr />
+
+        <div id="PureText">
+            <p>
+                This is a form element <code>form</code> for a login form
+                Each <code>form</code> element holds the <code>Label</code> for the <code>input</code> element.
+            </p>
+
+            <pre>
+            &lt;div&gt;
+            &lt;label for=&quot;name&quot;&gt;Username&lt;/label&gt;
+            &lt;input id=&quot;name&quot; type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+            &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+            &lt;input id=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;pure-button pure-button-primary&quot;&gt;Submit&lt;/button&gt;
+            &lt;/div&gt;    
+            </pre>
+        </div>
+
+        <div id="PureText">
+            <p>
+                Various styles have been applied to the login form.
+            </p>
+
+            <pre>               
+        h1 {
+            text-align: center;
+        }
+            </pre>
+            <p>
+                I have applied the CSS Styling: <code>Margin-auto</code>, <code>width: 350px</code>, <code>width:height</code>, <code>font-size: 14px</code>,
+                <code>color: #09C;</code>. This has changed the Login Box fron a  simple text box to a good reasonable Usr feel Element.
+            </p>
+            <pre>
+        form {
+            margin: auto;
+            position: relative;
+            width: 350px;
+            height: 130px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: bold;
+            color: #09C;
+            text-decoration: none;
+            border-radius: 1px;
+            padding: 10px;
+            border: 1px solid #999;
+            border: inset 1px solid #333;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+</pre>
+
+
+            <p>
+                Since designing only the form element is not good enough, I have applied more cascading to the text and Label Elements.
+                Basically i have applied the <code>-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);</code> which gives a shadowing effect to the test fields.
+            </p>
+
+            <pre>
+        input {
+            width: 200px;
+            display: block;
+            border: 1px solid #999;
+            height: 40px;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+</pre>
+        </div>
+        <div>
+            <h3>Source link:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week2/css/css2.html" target="_blank">Source</a></li>
+
+            </ul>
+        </div>
+        <div style="display:inline-block;width:100%">
+            <h3>Reference:</h3>
+            <ul>
+                <li><a href="http://www.w3schools.com/cssref/" target="_blank">W3Schools</a></li>
+            </ul>
+        </div>
+
+
+
+</body>
+</html>

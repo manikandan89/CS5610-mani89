@@ -1,0 +1,6 @@
+../../story/whatisnext.htm?../experiments/week1/story.txt			What is Next?
+../week1/setup.html											SETUP
+../week1/html1.html											HTML1
+../week1/html2.html											HTML2
+../week1/html3.html											HTML3
+../week1/html4.html											HTML4
