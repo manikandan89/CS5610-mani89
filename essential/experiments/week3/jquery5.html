@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+    <title>jQuery UI Menu - Experiment 5</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
+    <script>
+    $(function () {
+        $(document).tooltip();
+    });
+    </script>
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Jquery Experiment UI based - 5</a>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+    <div class="jumbotron">
+        <div class="container">
+            <h3>Demonstrate Navigation In Menu</h3>
+        <ul id="menu">
+            <li class="ui-state-disabled">Social</li>
+            <li>History</li>
+            <li>Civics</li>
+            <li>Geography</li>
+            <li>
+                Science
+                <ul>
+                    <li class="ui-state-disabled">Physics</li>
+                    <li>Chemistry</li>
+                    <li>Biology</li>
+                </ul>
+            </li>
+            <li>Maths</li>
+            <li>
+                Languages
+                <ul>
+                    <li>
+                        English
+                        <ul>
+                            <li>Verb</li>
+                            <li>Adjective</li>
+                            <li>Adverb</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Others
+                        <ul>
+                            <li>French</li>
+                            <li>German</li>
+                            <li>Spanish</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="ui-state-disabled">Philosophy</li>
+        </ul>
+       </div>
+        <br />
+        <pre>
+            $(function () {
+            $("#menu").menu();
+            });
+        </pre>
+
+        <br />
+        <br />
+
+        <div class="container">
+            <h3>Demonstration of tooltip</h3>
+            <p>
+                <a href="#" title="That&apos;s what this widget is">Tooltips</a> has been attached to this element
+            </p>
+            <p>
+                This is not a native tooltip
+                <a href="http://jqueryui.com/themeroller/" title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+                will also style tooltips accordingly.
+            </p>
+            <p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
+            <p><label for="age">Your age:</label><input id="age" title="Age is a necessary field for background checks"></p>
+            <p>Hover the field to see the tooltip.</p>
+        </div>
+        <br />
+        <pre>
+          $(function () {
+          $(document).tooltip();
+          });
+        </pre>
+
+
+        <div class="container">
+            <h3>Source link:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week3/jquery5.html" target="_blank">Source</a></li>
+
+            </ul>
+        </div>
+
+        <div class="container">
+            <h3>Reference</h3>
+            <ul>
+                <li><a href="http://jqueryui.com/" target="_blank">jQuery</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

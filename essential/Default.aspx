@@ -84,8 +84,9 @@
     <li><a href="filelist.aspx" target="_blank">FileList</a></li>
     <li><a href="autofile.aspx" target="_blank">AutoFile</a></li>
     <li><a href="images/autoimage.aspx" target="_blank">Images</a></li>
-    <a href="../mani89/story/index.htm?../experiments/story.txt" target="_blank">Experiments</a>
+    <li><a href="../mani89/story/index.htm?../experiments/story.txt" target="_blank">Experiments</a></li>
     <li><a href="blog/" target="_blank">Blog</a></li>
+    <li><a href="https://github.com/manikandan89/" target="_blank">Github</a></li>
 </ul>
 
 <hr />

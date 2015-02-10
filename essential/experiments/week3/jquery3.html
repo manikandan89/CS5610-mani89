@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jquery Experiment - 3</title>
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        alert("Text: " + $("#test").text());
+    });
+    $("#btn2").click(function(){
+        alert("HTML: " + $("#test").html());
+    });
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        var div = $("div");  
+        div.animate({left: '100px'}, "slow");
+        div.animate({fontSize: '3em'}, "slow");
+    });
+
+});
+</script>
+  
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Jquery Experiment - 3</a>
+            </div>
+     </div>
+</div>
+<br />
+<div class="jumbotron">
+	<div class="container">
+		<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+
+		<button id="btn1" class="btn btn-lg btn-primary btn-block" type="submit">
+       			Show Text
+		</button>
+		<button id="btn2" class="btn btn-lg btn-primary btn-block" type="submit">
+       			Show HTML
+		</button>
+	</div>
+
+    <br /><br />
+
+    <div class="container">
+        <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+        <div style="background:#98bf21;height:50px;width:50px;position:absolute;">HELLO</div>
+
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Animate
+        </button>
+    </div>
+
+</div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="container">
+        <h3>Source link:</h3>
+        <ul>
+            <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week3/jquery3.html" target="_blank">Source</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3>Reference</h3>
+        <ul>
+            <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

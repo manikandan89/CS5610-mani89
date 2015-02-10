@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jquery Experiment - 2</title>
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+    });
+});
+</script>
+<script>
+  $(function () {
+  $("#tabs").tabs();
+ });
+</script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Jquery Experiment - 2</a>
+            </div>
+        </div>
+ </div>
+
+<div class="jumbotron">
+        <div class="container">   
+            <h3>Demonstrate <mark>Toggle</mark> with different speed parameters.</h3>
+            <br />     
+            <div id="div1" style="width:200px;height:80px;">
+                <h2 style="color:green"> I toggle fast </h2>
+            </div>
+            <br>
+            <div id="div2" style="width:800px;height:80px;">
+                <h2 style="color:blue"> I am slower than  green and faster than red </h2>
+            </div>
+            <br>
+            <div id="div3" style="width:300px;height:80px;">
+                <h2 style="color:red"> I am the slowest </h2>
+            </div>
+
+            <br />
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Toggle
+            </button>
+            <br />
+           <pre>
+             $(document).ready(function(){
+                $("button").click(function(){
+                    $("#div1").fadeToggle();
+                    $("#div2").fadeToggle("slow");
+                    $("#div3").fadeToggle(3000);
+               });
+            });
+            </pre>
+        </div>
+
+        <br />
+        <div class="container">
+            <h1>Effect of tabs in jquery</h1>
+            <p></p>
+            <p>A single content area with multiple panels, each associated with a header in a list.</p>
+            <pre>
+                $(document).ready(function () {
+                $( "#tabs" ).tabs();
+                });
+            </pre>
+            <p></p>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">HTML5</a></li>
+                    <li><a href="#tabs-2">CSS3</a></li>
+                    <li><a href="#tabs-3">WEBSERVICES</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p>HTML5 is a strong, clean, modern version of HTML. The emphasis of HTML5 is on content structure and on standardized facilities such as the canvas object for graphics and tools for local data.</p>
+                </div>
+                <div id="tabs-2">
+                    <p>Cascading style sheets or CSS have become a key to separating the styles, spacing, and location of elements of web content from the structural specification of that content in HTML files.</p>
+                </div>
+                <div id="tabs-3">
+                    <p>The concept of REST (REpresentational State Transfer) views a web page as a potential parameterized web service where the parameters are expressed in the query string. This is a beautiful and promising approach for clean design in a large number of applications.</p>
+            
+                </div>
+            </div>
+            <hr />
+        </div>
+
+    <br />
+    <div class="container">
+        <h3>Source link:</h3>
+        <ul>
+            <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week3/jquery2.html" target="_blank">Source</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3>Reference</h3>
+        <ul>
+            <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

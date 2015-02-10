@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jquery Experiment - 1</title>
+<style>
+      .slidein {
+           -webkit-animation-duration: 3s;
+           -webkit-animation-name: slidein;
+           -webkit-animation-iteration-count: 1;
+        }
+
+
+        @-webkit-keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+</style>
+
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide();
+    });
+});
+function slider() {
+            var e = document.getElementById("welcome");
+            e.className = "slidein";
+}
+</script>
+</head>
+<body onload="slider()">
+
+<div id="welcome">
+    <h2>Welcome to my first experiment in jquery focussing on sliders and hide </h2>
+    <pre>
+        function slider() {
+            var e = document.getElementById(&quot;welcome&quot;);
+            e.className = &quot;slidein&quot;;
+        }
+    
+    </pre>
+</div>
+
+    <br /><br /><br /><br />
+    <h2 style="color:green">This heading will not get hidden</h2>
+
+    <p style="color:red">I am going to hide this paragraph</p>
+
+<button class="btn btn-lg btn-primary btn-block" type="submit">
+ Hide
+</button>
+
+
+    <pre>
+     $(document).ready(function(){
+    $(&quot;button&quot;).click(function(){
+        $(&quot;p&quot;).hide();
+    });
+});
+</pre>
+
+    <br />
+    <div class="container">
+        <h3>Source link:</h3>
+        <ul>
+            <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week3/jquery1.html" target="_blank">Source</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3>Reference</h3>
+        <ul>
+            <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

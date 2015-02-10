@@ -1,0 +1,8 @@
+../../story/whatisnext.htm?../experiments/week3/story.txt			What is Next?
+../week3/jquery1.html											JQUERY1
+../week3/jquery2.html											JQUERY2
+../week3/jquery3.html											JQUERY3
+../week3/jquery4.html											JQUERY4
+../week3/jquery5.html											JQUERY5
+
+
