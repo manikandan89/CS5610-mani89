@@ -2,4 +2,5 @@
 ../story/index.htm?../experiments/week1/story.txt			Week1
 ../story/index.htm?../experiments/week2/story.txt			Week2
 ../story/index.htm?../experiments/week3/story.txt			Week3
+../story/index.htm?../experiments/week4/story.txt			Week4
 

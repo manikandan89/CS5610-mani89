@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular JS Experimentation - 2</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Angular JS Experiment - 2</a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <hr />
+        <div class="container">
+        <div ng-controller="TableDataModelController">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Table Structure Population Using Angular JS</h1>
+                    <p>This Web Page Mainly talks about the table derivation with the help of Angular JS </p>
+                    <p>The below displayed table shows the Dynamic Modelling using Angular JS</p>
+                    <p>The major advantage of Angular over other JS scripts is that we have to write explicit Javascript functional Description for Handling the Data Modification</p>
+                    <p>The Major components of Table definitions of Angular JS is two Sections:</p>
+                    <p><code>ng-repeat="product in products"</code></p>
+                    <p><code>function DataModelController($scope) {$scope.add = function () {
+                    var newProduct = {
+                    productName: $scope.newProduct.productName,
+                    productId: $scope.newProduct.productId,
+                    productPrice: $scope.newProduct.productPrice
+                };
+                $scope.products.push(newProduct);}</code></p>
+                    <p>This code does the magic of monitoring events changes and  populating data dynamically</p>
+                    <p>In the below table add some valid data and click on Add to see the Dynamic effect of Angular JS</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product ID</th>
+                                <th>Product Price</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            <tr>
+                                <th><input ng-model="newProduct.productName" class="form-control" /></th>
+                                <th><input ng-model="newProduct.productId" class="form-control" /></th>
+                                <th><input ng-model="newProduct.productPrice" class="form-control" /></th>
+                                <th>
+                                    <button ng-click="add()" class="btn btn-success">Add</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in products">
+                                <td>{{product.productName}}</td>
+                                <td>{{product.productId}}</td>
+                                <td>${{product.productPrice}}</td>
+                                <td>
+                                    <button ng-click="delete(employee)" class="btn btn-warning">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div ng-controller="FilterDataModelController">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Dynamic Filtering Mechanism</h1>
+                    <p>The Below mentioned code describes about the filtering technique used with the help of Angular JS</p>
+                    <p>The below feature displays one of the most widely used feature in most of the Web based applications</p>
+                    <p>The Major components of Filter Mechanism of Angular JS is two Sections:</p>
+                    <p><code>ng-repeat="product in products"</code></p>
+                    <p>
+                        <code>
+                            function FilterDataModelController($scope) {
+                            var customer1 = {
+                            name: "Rooney",
+                            city: "England"
+                            };
+
+                            var customer2 = {
+                            name: "Messi",
+                            city: "Argentina"
+                            };
+
+                            var customer3 = {
+                            name: "Berbatov",
+                            city: "Bulgaria"
+                            };
+
+                            var customers = [customer1, customer2, customer3];
+                            $scope.customers = customers;
+                            }
+                        </code>
+                    </p>
+                    <p>This code agin takes the pain implementing the search alhorithm</p>
+                    <p>In the below Search Filter Field enter some data staritng with <strong>sr</strong> then automatically the li refreshes dislaying only those data contaning only the alphabet <strong>sr</strong></p>
+                    <form class="form-signin">
+                        <input type="text" class="form-control" placeholder="Search Criteria" ng-model="nameText">
+                        <ul>
+                            <li ng-repeat="cust in customers | filter:nameText ">
+                                {{cust.name}} - {{cust.city}}
+                            </li>
+                        </ul>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+            <div>
+                <h3>Link To Source:</h3>
+                <ul>
+                    <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week4/angularjs2.html" target="_blank">Source</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <h3>References:</h3>
+                <ul>
+                    <li><a href="https://angularjs.org/" target="_blank">AngularJS Site</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+    <script>
+        function TableDataModelController($scope) {
+
+            var Iphone = {
+                productName: "Iphone4",
+                productId: "1",
+                productPrice: 250
+            };
+
+            var Samsung = {
+                productName: "Galaxy",
+                productId: "2",
+                productPrice: 200
+            };
+
+            var Sony = {
+                productName: "Xperia",
+                productId: "3",
+                productPrice: 225
+            };
+
+                   var products = [Iphone, Samsung, Sony];
+
+                   $scope.products = products;
+
+                   $scope.delete = function (product) {
+                       var index = $scope.products.indexOf(product);
+                       $scope.products.splice(index, 1);
+                   }
+            
+            $scope.add = function () {
+                var newProduct = {
+                    productName: $scope.newProduct.productName,
+                    productId: $scope.newProduct.productId,
+                    productPrice: $scope.newProduct.productPrice
+                };
+                $scope.products.push(newProduct);
+            }
+        }
+
+        function FilterDataModelController($scope) {
+            var customer1 = {
+                name: "Rooney",
+                city: "England"                
+            };
+
+            var customer2 = {
+                name: "Messi",
+                city: "Argentina"
+            };
+
+            var customer3 = {
+                name: "Berbatov",
+                city: "Bulgaria"
+            };
+
+            var customers = [customer1, customer2, customer3];
+            $scope.customers = customers;
+        }
+    </script>
+</body>
+</html>

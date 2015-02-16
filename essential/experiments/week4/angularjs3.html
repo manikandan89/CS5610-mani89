@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular JS Experimentation - 3</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Angular JS Experimentation - 3</a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <hr />
+    <div class="container">
+        <div ng-controller="helloController">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Binding a Third Party Web Service API Using Angular JS</h1>
+                    <p>This Web Page Mainly talks about displaying on 'How to Consume Third Party Web Service API.' </p>
+                    <p>This is the main form of Servie Oriented Architecture where we can directly consume the Data Content of Others Vendors rather than doing redundant work for the same Program Logic</p>
+                    <p>The major advantage of Angular over other WebService API is that Angular neatly binds Web Service Calls and easily displays the Data Content at the View Point</p>
+                    <p>The Major components of Web Service definitions of Angular JS is two Sections:</p>
+                    <p><code>ng-repeat="product in products"</code> If the JSON Data comes multiple Array Set</p>
+                    <p>
+                        <code>
+                            function helloController($scope, $http) {
+                            $http.get('http://rest-service.guides.spring.io/greeting').
+                            success(function (data) {
+                            $scope.greeting = data;
+                            });
+                            }
+                        </code>
+                    </p>
+                    <p>This code does the magic of monitoring events changes and  populating data dynamically</p>
+                    <p>In the Display below, a simple JSON Data is consumed from Spring Suite Site <strong>'http://rest-service.guides.spring.io/greeting'</strong> for Hello World</p>                    
+                    <h2 class="text-primary">{{greeting}}</h2>
+                    <p>The ID is {{greeting.id}}</p>
+                    <p>The content is {{greeting.content}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-controller="NewsController">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>New York Times Web Service API Using Angular JS</h1>
+                    <p>In the Below display, I am binding New York Times API with Angular JS </p>
+                    <p>
+                        <code>
+                            function NewsController($scope, $http) {
+                            var Moviekey = '707a014a52aba838615749b48fc9ba0e:13:69881275';
+                            var RawURL = "http://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=";
+                            var URL = RawURL + Moviekey;
+                            $http.get(URL).
+                            success(function (data) {
+                            $scope.movies = data.results;
+                            });
+                            }                     
+                        </code>
+                    </p>
+                    <p>This code does the magic of monitoring events changes and  populating data dynamically</p>
+                    <p>In the Display below, a simple JSON Data is consumed from New York Times Dev API Site <strong>'http://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key='</strong> for Latest Movie Reviews</p>
+                    <p>If You find any difficulty in viewing the Link in Chrome, please enable this extension in your chrome browser <a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi">CORS Extension.</a>Chrome comes with the latest security policies to restrict third party data content</p>
+                    
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Movie ID</th>
+                                <th>Display title</th>
+                                <th>Headline</th>
+                                <th>Summary</th>
+                                <th>Publication Date</th>
+                                <th>Movie Review Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="movie in movies">
+                                <td>{{movie.nyt_movie_id}}</td>
+                                <td>{{movie.display_title}}</td>
+                                <td>{{movie.headline}}</td>
+                                <td>{{movie.summary_short}}</td>
+                                <td>{{movie.publication_date}}</td>
+                                <td><a href="{{movie.link.url}}">{{movie.display_title}}</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week4/angularjs3.html" target="_blank">Source</a></li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="https://angularjs.org/" target="_blank">AngularJS Site</a></li>
+
+            </ul>
+        </div>
+        
+        
+    </div>
+
+
+
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+    <script>
+        function helloController($scope, $http) {
+            $http.get('http://rest-service.guides.spring.io/greeting').
+                success(function (data) {
+                    $scope.greeting = data;
+                });
+        }
+
+
+        function NewsController($scope, $http) {
+            var Moviekey = '707a014a52aba838615749b48fc9ba0e:13:69881275';
+            var RawURL = "http://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=";
+            var URL = RawURL + Moviekey;
+            $http.get(URL).
+                success(function (data) {
+                    $scope.movies = data.results;
+                });
+        }
+    </script>
+</body>
+</html>
