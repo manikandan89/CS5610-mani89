@@ -1,0 +1,142 @@
+<html>  
+<head>  
+<title>Javascript Experimentation - 3</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>  
+<body>  
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javascript Experimentation - 3</a>
+            </div>
+        </div>
+    </div>
+
+<div class="jumbotron">
+       
+ 		<div class="container">
+ 		  <h1>Javascript Experiment -3</h1>
+          <p>This Web Page is about the third experiment done on Javascript  to demonstrate my learning on
+          Browser Object Model</p>
+          <br><br>
+         <h3> Browser object confirm() in javascript </h3>
+ 		<p>It displays the confirm dialog box. It has message with ok and cancel buttons.</p>
+ 			<script type="text/javascript">
+				function msgConfirm(){  
+				var v= confirm("Are u sure?");  
+				if(v==true){  
+				alert("ok");  
+				}  
+				else{  
+				alert("cancel");  
+				} 
+			</script>
+			<br>
+			<input type="button" value="delete record" onclick="msgConfirm()"/>
+			<br><br>
+			<pre>
+				function msgConfirm(){  
+				var v= confirm("Are u sure?");  
+				if(v==true){  
+				alert("ok");  
+				}  
+				else{  
+				alert("cancel");  
+				} 
+			</pre>
+ 		</div>
+ 		<br><br>
+ 		<div class="container">
+ 		<h3> Browser object prompt() in javascript </h3>
+ 		<p>It displays prompt dialog box for input. It has message and textfield.</p>
+ 			<script type="text/javascript">
+				function msgPrompt(){  
+				var v= prompt("Who are you?");  
+				alert("I am "+v);  
+  
+				} 
+			</script>
+			<br>
+			<input type="button" value="click" onclick="msgPrompt()"/>  
+			<br><br>
+			<pre>
+			function msgPrompt(){  
+				var v= prompt("Who are you?");  
+				alert("I am "+v);  
+  
+				} 
+			</pre>
+ 		</div>
+ 		<br><br>
+ 		<div class="container">
+ 		<h3> Browser object open() in javascript </h3>
+ 		<p>It displays the content in a new window.</p>
+ 			<script type="text/javascript">
+			function msgOpen(){  
+			open("http://net4.ccs.neu.edu/home/mani89/");  
+			}
+		</script> 
+		<br>
+		<input type="button" value="home" onclick="msgOpen()"/> 
+		<br><br>
+		<pre>
+		function msgOpen(){  
+			open("http://net4.ccs.neu.edu/home/mani89/");  
+			}
+			</pre>
+ 		</div>
+
+ 		<br><br>
+
+ 		<div class="container">
+ 		
+ 		<h3> Browser object setTimeout() in javascript </h3>
+ 		<p>It performs its task after the given milliseconds.</p>
+ 			<script type="text/javascript">
+			function msgTimeout(){  
+			setTimeout(  
+			function(){  
+				alert("Welcome to home after 2 seconds")  
+			},2000);  
+  
+			} 
+		</script> 
+		<br>
+		<input type="button" value="click" onclick="msgTimeout()"/> 
+		<br><br>
+		<pre>
+		function msgTimeout(){  
+			setTimeout(  
+			function(){  
+				alert("Welcome to Javatpoint after 2 seconds")  
+			},2000);  
+  
+			}
+			</pre>
+ 		</div>
+
+ 		<br><br>
+
+		        <div class="container">
+            <h3>Source link:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week5/js3.html" target="_blank">Source</a></li>
+
+            </ul>
+        </div>
+
+        <div class="container">
+			<h3>Reference</h3>
+            <ul>
+                <li><a href="http://jsfiddle.net/" target="_blank">JsFiddle</a></li>
+            </ul>
+        </div>
+</div>
+
+ 
+</body>  
+</html> 

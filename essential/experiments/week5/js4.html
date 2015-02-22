@@ -1,0 +1,164 @@
+
+<!doctype html>
+<html>
+<head>
+    <style>
+.slidein {
+            -webkit-animation-duration: 3s;
+            -webkit-animation-name: slidein;
+            -webkit-animation-iteration-count: 1;
+        }
+
+
+        @-webkit-keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: auto;
+            position: relative;
+            width: 210px;
+            height: 330px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: bold;
+            color: #09C;
+            text-decoration: none;
+            border-radius: 1px;
+            padding: 10px;
+            border: 1px solid #999;
+            border: inset 1px solid #333;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        input {
+            width: 200px;
+            display: block;
+            border: 1px solid #999;
+            height: 40px;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #PureText {
+            float: left;
+            font-size: x-large;
+        }
+
+        form {
+            align-content: center;
+            align-items: center;
+        }
+
+        p {
+            color: blueviolet;
+        }
+    </style>
+    <script src="/home/mani89/javascript/page.js"></script>
+    <script>
+        function setup() {
+            var e = document.getElementById("LoginBox");
+            e.className = "slidein";
+        }
+    </script>
+
+
+    <title>Javascript Experimentation - 4</title>
+</head>
+
+
+<body onload="setup()">
+    <div id="LoginBox">
+        <h1>Javascript Experimentation - 4</h1>
+        <h3> This Web page demonstrates my learning on Javascript DOM Objects </h3>
+
+
+        <form>
+
+            <div>
+                <label for="name">Username</label>
+                <input id="name" type="text" placeholder="Username">
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password">
+            </div>
+
+            <div>
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="Email Address">
+            </div>
+
+            <div>
+                <label for="house">Demgraphic Information</label>
+                <input id="house" type="text" placeholder="Enter Address here...">
+            </div>
+
+            <div>
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    
+
+    <hr />
+
+    <div id="PureText">
+        <p>
+            I have started with the Javascript Web Design. The implementation is the Slide In of the Head and the Login Box. Basically the Login 
+            form element slides In from the right to the center of the Web Page.
+        </p>
+
+        <pre>
+            function setup() {
+            var e = document.getElementById("LoginBox");
+            e.className = "slidein";
+        }
+            </pre>
+    </div>
+
+    <div id="PureText">
+        <p>
+            The above javascript function starts onload of the Body content. The function receives the Login element and works on the DOM element
+            which slides in from the right to the center.
+        </p>
+    </div>
+
+       <div style="display:inline-block;width:100%">
+        <h3>Source Link:</h3>
+        <ul>
+            
+            <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week5/js4.html" target="_blank">Source</a></li>
+
+        </ul>
+        </div>
+
+    <div style="display:inline-block;width:100%">
+        <h3>References:</h3>
+        <ul>
+            
+            <li><a href="http://jsfiddle.net/" target="_blank">JsFiddle</a></li>
+
+        </ul>
+        </div>
+
+
+</body>
+</html>

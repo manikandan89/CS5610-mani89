@@ -1,0 +1,186 @@
+<html>  
+<head>  
+<title>Javascript Experimentation - 1</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>  
+<body>  
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Javascript Experimentation - 2</a>
+            </div>
+        </div>
+    </div>
+
+<div class="jumbotron">
+        <div class="container">
+          <h1>Javascript Experiment -2</h1>
+          <p>This Web Page is about the second experiment done on Javascript  to demonstrate my learning on
+          Javascript Objects</p> 
+        	
+ 		</div>
+ 		<br><br>
+ 		<div class="container">
+ 		<p> Creating an instance of the object </p>
+ 		<p>new keyword is used to create object.</p>
+ 			<script type="text/javascript">
+				emp={id:102,name:"Rafael Nadal",salary:40000}  
+				document.write(emp.id+" "+emp.name+" "+emp.salary);  
+
+				var emp=new Object();  
+				emp.id=101;  
+				emp.name="Roger Federer";  
+				emp.salary=50000;  
+				document.write(emp.id+" "+emp.name+" "+emp.salary); 
+			</script>
+			<br>
+			<pre>
+			emp={id:102,name:"Rafael Nadal",salary:40000}  
+				document.write(emp.id+" "+emp.name+" "+emp.salary);  
+
+				var emp=new Object();  
+				emp.id=101;  
+			create function with arguments. Each argument value can be assigned in the current object by using this keyword.	emp.name="Roger Federer";  
+				emp.salary=50000;  
+				document.write(emp.id+" "+emp.name+" "+emp.salary); 
+			</pre>
+ 		</div>
+ 		<br><br>
+ 		<div class="container">
+ 		<p> Object constructor </p>
+ 		<p>Creating function with arguments. Each argument value can be assigned in the current object by using this keyword. </p>
+ 			<script type="text/javascript">
+				function emp(id,name,salary){  
+				this.id=id;  
+				this.name=name;  
+				this.salary=salary;  
+  
+				this.changeSalary=changeSalary;  
+				function changeSalary(otherSalary){  
+				this.salary=otherSalary;  
+				}  
+				}  
+				e=new emp(103,"Andy Murray",30000);  
+				document.write(e.id+" "+e.name+" "+e.salary);  
+				e.changeSalary(45000);  
+				document.write("<br>"+e.id+" "+e.name+" "+e.salary); 
+			</script>
+			<br>
+			<pre>
+			function emp(id,name,salary){  
+				this.id=id;  
+				this.name=name;  
+				this.salary=salary;  
+  
+				this.changeSalary=changeSalary;  
+				function changeSalary(otherSalary){  
+				this.salary=otherSalary;  
+				}  
+				}  
+				e=new emp(103,"Andy Murray",30000);  
+				document.write(e.id+" "+e.name+" "+e.salary);  
+				e.changeSalary(45000);  
+				document.write("<br>"+e.id+" "+e.name+" "+e.salary); 
+			</pre>
+ 		</div>
+ 		<br><br>
+ 		<div class="container">
+ 		<p> Array literals </p>
+ 		<p> Values are contained inside [ ] and separated by , (comma). </p>
+ 		<p> The .length property returns the length of an array.</p>
+ 			<script type="text/javascript">
+			var emp=["Roger","Novak","Rafa"];  
+			for (i=0;i<emp.length;i++){  
+			document.write(emp[i] + "<br/>"); 
+		</script> 
+		<br>
+		<pre>
+		var emp=["Roger","Novak","Rafa"];  
+			for (i=0;i<emp.length;i++){  
+			document.write(emp[i] + "<br/>"); 
+		</pre>
+ 		</div>
+
+ 		<br><br>
+
+ 		<div class="container">
+ 		<p>Array Constructor </p>
+ 		<p> Creating instance of array by passing arguments in constructor so that we don't have to provide value explicitely. </p>
+ 			<script type="text/javascript">
+			var emp=new Array("Sachin","Sourav","Rahul");  
+			for (i=0;i<emp.length;i++){  
+			document.write(emp[i] + "<br>");  
+			} 
+		</script> 
+		<br>
+		<pre>
+		var emp=new Array("Sachin","Sourav","Rahul");  
+			for (i=0;i<emp.length;i++) {  
+			document.write(emp[i] + "<br>");  
+			} 
+			</pre>
+ 		</div>
+
+ 		<br><br>
+
+ 		<div class="container">
+ 		<p> String Literals</p>
+ 		<p> The string literal is created using double quotes. </p>
+ 			<script type="text/javascript">
+			var stringname=new String("hello javascript string");  
+			document.write(stringname);  
+		</script> 
+		<br>
+		<pre>
+		var stringname=new String("hello javascript string");  
+			document.write(stringname);  
+			</pre>
+ 		</div>
+
+ 		<br><br>
+
+ 		<div class="container">
+ 		<p> Javascript Date Object </p>
+ 		<p> The JavaScript date object can be used to get year, month and day. </p>
+ 			<script type="text/javascript">
+			var today=new Date();  
+			var h=today.getHours();  
+			var m=today.getMinutes();  
+			var s=today.getSeconds();  
+			document.getElementById('txt').innerHTML=h+":"+m+":"+s;  
+		</script> 
+		<br>
+		<pre>
+		var today=new Date();  
+			var h=today.getHours();  
+			var m=today.getMinutes();  
+			var s=today.getSeconds();  
+			document.getElementById('txt').innerHTML=h+":"+m+":"+s;  
+			</pre>
+ 		</div>
+
+ 		<br><br>
+
+		        <div class="container">
+            <h3>Source link:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week5/js2.html" target="_blank">Source</a></li>
+
+            </ul>
+        </div>
+
+        <div class="container">
+			<h3>Reference</h3>
+            <ul>
+                <li><a href="http://jsfiddle.net/" target="_blank">JsFiddle</a></li>
+            </ul>
+        </div>
+</div>
+
+ 
+</body>  
+</html> 
