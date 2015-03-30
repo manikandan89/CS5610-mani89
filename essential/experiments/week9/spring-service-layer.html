@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Experimentation - 10</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Spring Experimentation - 10</a>
+            </div>            
+    </div>
+        </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Spring - Service</h1>
+                <p>This Web Page is mainly about the Spring service</p>
+            </div>
+                
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>All the business logic should be performed in the service layer and not in the controller.</p>
+                        
+                    <pre>
+                      @Service
+                            @Transactional
+                            public class HomeServiceImpl implements HomeService {
+
+                                @Override
+                                public Employee findEmployee() {
+                                    // TODO Auto-generated method stub
+                                    Employee person = new Employee();
+                                    person.setId(1);
+                                    person.setFirstName(&quot;Sritharan&quot;);
+                                    person.setLastName(&quot;Mahendra Babu&quot;);
+                                    return person;
+                                }
+                            }
+                    </pre>
+
+                     <br />
+
+                    <p> This service is autowired with the controller</p>
+                    <pre>
+                    private HomeService homeService;
+    
+                         @Autowired
+                            public HomeController(HomeService homeService) {
+                                this.homeService = homeService;
+                            }
+                    </pre>
+                    
+            </div>
+
+        </div>        
+    </div>
+
+      <div>
+            <h3>Link To Site:</h3>
+            <ul>
+                <li><a href="http://booksandmusicstack-mani89.rhcloud.com/example" target="_blank">Spring Service Demo</a></li>
+            </ul>
+    </div>
+
+     <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week9/spring-service-layer.html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring Docs</a></li>
+            </ul>
+        </div>
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>

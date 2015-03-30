@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Experimentation - 5</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Spring Experimentation - 5</a>
+            </div>            
+    </div>
+        </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Spring - Exception Handling</h1>
+                <p>This Web Page is mainly about the exception handling in Spring</p>
+            </div>
+                
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Exceptions can be handled using the ExceptionHandler. The state can be maintained and a proper error response can be sent back to the client incase of error conditions</p>
+                        
+                    <pre>
+                       @ExceptionHandler(EmotionNotFoundException.class)
+                        @ResponseStatus(HttpStatus.NOT_FOUND)
+                             public @ResponseBody Error emotionNotFound(EmotionNotFoundException e) {
+                            String emotion = e.getEmotion();
+                            return new Error(4, &quot;Response [&quot; + emotion + &quot;] not found&quot;);
+                        }
+                    </pre>
+
+                     <br />
+
+                    <p> The error object has the errorId and the message to be populated</p>
+                    <pre>
+                     public class EmotionNotFoundException extends RuntimeException {
+                         private String emotion;
+    
+                         public EmotionNotFoundException(String emotion) {
+                            this.emotion = emotion;
+                        }
+    
+                         public String getEmotion() {
+                            return emotion;
+                        }
+
+                    }
+                    </pre>
+
+                    <div class="container">
+                        <p> I am using Spring's ExceptionHandler to handle bad requests. When a requestById is made for an id that has no data in database, a proper error response has to be maintanied to be displayed to the browser </p>
+                    </div>
+                    
+            </div>
+
+        </div>        
+    </div>
+
+    
+
+     <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week8/spring-exception.html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring Docs</a></li>
+            </ul>
+        </div>
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>

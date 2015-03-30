@@ -1,0 +1,9 @@
+../../story/whatisnext.htm?../experiments/week8/story.txt			What is Next?
+../week8/spring-setup.html											SPRING-SETUP
+../week8/spring-bean-config.html									SPRING-BEAN-CONFIG
+../week8/spring-hello.html											SPRING-HELLO
+../week8/spring-jackson.html										SPRING-JACKSON
+../week8/spring-exception.html										SPRING-EXCEPTION
+
+
+

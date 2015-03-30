@@ -1,0 +1,9 @@
+../../story/whatisnext.htm?../experiments/week7/story.txt			What is Next?
+../week7/mongo1.html											MONGO1
+../week7/mongo2.html											MONGO2
+../week7/mongo3.html											MONGO3
+../week7/mongo4.html											MONGO4
+../week7/mongo5.html											MONGO5
+
+
+

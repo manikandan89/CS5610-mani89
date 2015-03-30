@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Experimentation - 6</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Spring Experimentation - 6</a>
+            </div>            
+    </div>
+        </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Spring - JPA Configuration</h1>
+                <p>This Web Page is mainly about spring datasource configuation configuration</p>
+            </div>
+                
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            <li>Add mysql catridge in Openshift</li>
+                            <li>Add PHPAdmin catridge in Openshift</li> 
+                            <li>Create a table and add necessary queries</li>                             
+                         </ul>  
+                         <br /> 
+                        <h2>DATASOURCE</h2>
+                        <h4>The datasource should be configured in the spring datasourcebean</h4>
+                    <pre>
+                       &lt;bean id=&quot;dataSource&quot; class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;
+                    &lt;property name=&quot;username&quot; value=&quot;admin***&quot;/&gt;
+                    &lt;property name=&quot;password&quot; value=&quot;******&quot;/&gt;
+                    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql://******/booksandmusicstack&quot;/&gt;
+                    &lt;property name=&quot;driverClassName&quot; value=&quot;com.mysql.jdbc.Driver&quot;/&gt;
+                    &lt;/bean&gt;
+                    </pre>
+                    <br />
+                      <h2>HIBERNATE</h2>
+                        <h4>I am going to use Hibernate for persistence in my project.</h4>
+                    <pre>
+                        &lt;bean id=&quot;entityManagerFactory&quot; class=&quot;org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean&quot;&gt;
+                        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
+                        &lt;property name=&quot;jpaVendorAdapter&quot;&gt;
+                            &lt;bean class=&quot;org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter&quot;/&gt;
+                        &lt;/property&gt;
+                        &lt;property name=&quot;jpaProperties&quot;&gt;
+                            &lt;map&gt;
+                                &lt;entry key=&quot;hibernate.hbm2ddl.auto&quot; value=&quot;create-drop&quot;/&gt;
+                                &lt;entry key=&quot;hibernate.show_sql&quot; value=&quot;true&quot;/&gt;
+                            &lt;/map&gt;
+                        &lt;/property&gt;
+                     &lt;property name=&quot;packagesToScan&quot; value=&quot;edu.neu.project.model&quot;/&gt;
+                     &lt;/bean&gt;
+                    </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>        
+    </div>
+
+     <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week9/spring-jpa.html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring Docs</a></li>
+            </ul>
+        </div>
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>

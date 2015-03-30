@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Experimentation - 2</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Spring Experimentation - 2</a>
+            </div>            
+    </div>
+        </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Spring - Bean Configuration</h1>
+                <p>This Web Page is mainly about spring bean configuration</p>
+            </div>
+                
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>WEB.XML</h2>
+                        <h4>The web.xml is the root for all the spring config beans. The servlet and its mapping is defined here.</h4>
+                    <pre>
+                        &lt;context-param&gt;
+                        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+                        &lt;param-value&gt;/WEB-INF/spring/root-context.xml,
+                                     /WEB-INF/spring/security-config.xml
+                        &lt;/param-value&gt;
+                        &lt;/context-param&gt;
+                        &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;
+                            &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+                        &lt;servlet-mapping&gt;
+                            &lt;servlet-name&gt;appServlet&lt;/servlet-name&gt;
+                            &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+                        &lt;/servlet-mapping&gt;
+                    </pre>
+                    <br />
+                      <h2>DISPATCHER-SERVLET</h2>
+                        <h4>The servlet.xml handles the config for spring mvc. It maintains the resources and the corresponding packages to be scanned during a webservice call</h4>
+                    <pre>
+                        &lt;resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot; /&gt;
+                        &lt;beans:bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+                        &lt;beans:property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot; /&gt;
+                        &lt;beans:property name=&quot;suffix&quot; value=&quot;.jsp&quot; /&gt;
+                        &lt;/beans:bean&gt;
+                        &lt;context:component-scan base-package=&quot;edu.neu.project&quot; /&gt;
+                    </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>        
+    </div>
+
+     <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week8/spring-bean-config.html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring Docs</a></li>
+            </ul>
+        </div>
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>

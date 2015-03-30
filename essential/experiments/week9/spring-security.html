@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Experimentation - 7</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Spring Experimentation - 7</a>
+            </div>            
+    </div>
+        </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Spring - Security</h1>
+                <p>This Web Page is mainly about spring security configuration</p>
+            </div>
+                
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <h2>SECURITY</h2>
+                        <h4>Spring security offers secure login</h4>
+                        <p> The url pattern is matched and any url with '/user' is intercepted
+                        and has to go by the Spring Security</p>
+                        <p>Anonymous users cannot directly access the user page</p>
+                    <pre>
+                          &lt;http auto-config=&quot;true&quot;&gt;
+                          &lt;access-denied-handler error-page=&quot;/403page&quot; /&gt;
+                          &lt;intercept-url pattern=&quot;/user/**&quot; access=&quot;ROLE_USER&quot; /&gt;
+                         authentication-failure-url=&quot;/login?authfailed&quot; /&gt;
+                          &lt;logout logout-success-url=&quot;/login?logout&quot; /&gt;
+                         &lt;/http&gt;
+                    </pre>
+                    <br />
+                      <h2>SECURE ACCESS</h2>
+                        <h4>The spring security authentication manager handles all the authentication</h4>
+                        <p> The password for the user is matched with the account in the database</p>
+                    <pre>
+                        &lt;authentication-manager&gt;
+                          &lt;authentication-provider&gt;
+                           &lt;jdbc-user-service data-source-ref=&quot;dataSource&quot;
+                            users-by-username-query=&quot;select username,password, enabled from users where username=?&quot;
+                            authorities-by-username-query=&quot;select username, role from user_roles where username =?  &quot; /&gt;
+                          &lt;/authentication-provider&gt;
+                         &lt;/authentication-manager&gt;
+                    </pre>
+                    <br />
+                    <p> Spring security filter handles all the incoming requests</p>
+                    <pre>
+                        &lt;filter&gt;  
+                        &lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;  
+                        &lt;filter-class&gt;org.springframework.web.filter.DelegatingFilterProxy&lt;/filter-class&gt;  
+                    &lt;/filter&gt;  
+  
+                    &lt;filter-mapping&gt;  
+                        &lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;  
+                        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;  
+                    &lt;/filter-mapping&gt;
+                    </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>        
+    </div>
+
+     <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week9/spring-security.html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring Docs</a></li>
+            </ul>
+        </div>
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>

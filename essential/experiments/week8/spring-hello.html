@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Experimentation - 3</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Spring Experimentation - 3</a>
+            </div>            
+    </div>
+        </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Spring - Hello World</h1>
+                <p>This Web Page is mainly about the Hello World example</p>
+            </div>
+                
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>This HelloWorld Example is done using Spring Restful Webservice call. The dispatcher servlet calls the controller and through the logic in the view resolver, the home page with "Hello World" is rendered in a  jsp</p>
+                        
+                    <pre>
+                        @Controller
+                        @RequestMapping(&quot;/&quot;)
+                        public class HomeController {
+                        @RequestMapping(method = RequestMethod.GET)
+                            public String home(Locale locale, Model model) {
+                                logger.info(&quot;Welcome home! The client locale is {}.&quot;, locale);
+
+                                Date date = new Date();
+                                DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,
+                                        DateFormat.LONG, locale);
+
+                                String formattedDate = dateFormat.format(date);
+
+                                model.addAttribute(&quot;serverTime&quot;, formattedDate);
+
+                                return &quot;home&quot;;
+                             }
+
+                            }
+                    </pre>
+                    <br />
+                    <p>The jsp page gets the Hello World message from the server and displays it on the browser</p>
+                    <pre>
+                        <h1>
+                            Hello world!  
+                        </h1>
+                        <P>  The time on the server is ${serverTime}. </P>
+                    </pre>
+
+                    <br />
+                    <div class="container">
+                        <p> I have kicked off with my Project with the same viewResolver logic. The jsp pages are layered inside the view folder and whenever a String is returned, the prefix and suffix attributes are used to display the corresponding jsp page.
+                    </div>
+
+            </div>
+
+        </div>        
+    </div>
+
+     <div>
+            <h3>Link To Site:</h3>
+            <ul>
+                <li><a href="http://booksandmusicstack-mani89.rhcloud.com/" target="_blank">Hello World in Open Shift</a></li>
+            </ul>
+    </div>
+
+     <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week8/spring-hello.html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring Docs</a></li>
+            </ul>
+        </div>
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>

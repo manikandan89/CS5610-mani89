@@ -4,4 +4,8 @@
 ../story/index.htm?../experiments/week3/story.txt			Week3
 ../story/index.htm?../experiments/week4/story.txt			Week4
 ../story/index.htm?../experiments/week5/story.txt			Week5
+../story/index.htm?../experiments/week6/story.txt			Week6
+../story/index.htm?../experiments/week7/story.txt			Week7
+../story/index.htm?../experiments/week8/story.txt			Week8
+../story/index.htm?../experiments/week9/story.txt			Week9
 

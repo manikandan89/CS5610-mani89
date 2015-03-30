@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Node JS Experimentation - 5</title>
+
+    <!-- Bootstrap -->
+    <link href="/home/mani89/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">                
+                <a class="navbar-brand" href="#">Node JS Experimentation - 5</a>
+            </div>            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Node JS - Update and Delete</h1>
+                <p>This Web Page is mainly about the update and delete operation </p>
+            </div>
+
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>APP.PUT - SERVER</h2>
+                        <h4>The put operation can be performed to update a particular element</h4>
+                        <pre>
+                        app.put(&quot;/api/players/:id&quot;, function (req, res) {
+                        var index = req.params.id;
+                        players[index] = req.body;
+                        res.json(players);
+                        });
+                        </pre>
+                        <br>
+                          <h2>APP.DELETE - SERVER</h2>
+                        <h4>The delete operation can be performed to delete a particular element</h4>
+                        <pre>
+                        app.delete(&quot;/api/players/:id&quot;, function (req, res) {
+                        Player.remove({ _id: req.params.id }, function (err,doc) {
+                            Player.find(function (err, docs) {
+                                res.json(docs);
+                            });
+                        })
+                        });
+                        </pre>
+                     </div>
+                </div>
+             </div> 
+            
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>CONTROLLER</h2>
+                        <h4>The controller calls the restful put and delete of the node js server respectively</h4>
+                        <h4>It sends the response back to the client</h4>
+                        <pre>
+                         $scope.update = function (player) {
+                            $http.put(&quot;/api/players/&quot; + $scope.selectedIndex, player)
+                             .success(function (response) {
+                                 $scope.players = response;
+                             });
+                        }
+
+
+                        $scope.remove = function (id) {
+                        $http.delete(&quot;/api/players/&quot; + id)
+                        .success(function (response) {
+                            $scope.players = response;
+                        });
+                         }
+                        </pre>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>CLIENT</h2>
+                        <h4>The client side functionality deletes or updates the contents when clicked on the repective button</h4>
+                        <h4>This invokes the controller with a call to get()</h4>
+                        <pre>
+                           &lt;button class=&quot;btn btn-primary pull-right&quot; ng-click=&quot;update(player)&quot;&gt;
+                            &lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;button class=&quot;btn btn-danger pull-right&quot; ng-click=&quot;remove(player._id)&quot;&gt;
+                            &lt;span class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        <div>
+            <h3>Link To Site:</h3>
+            <ul>
+                <li><a href="http://nodejsexp-mani89.rhcloud.com" target="_blank">Node JS in Open Shift</a></li>
+               <li><a href="https://github.com/manikandan89/exp-nodejs" target="_blank">Github repo</a></li>
+            </ul>
+        </div>
+
+            <h3>Link To Source:</h3>
+            <ul>
+                <li><a href="http://net4.ccs.neu.edu/home/mani89/fileview/Default.aspx?~/experiments/week6/nodejs5
+                .html" target="_blank">Source</a></li>
+
+            </ul>
+        
+        <div>
+            <h3>References:</h3>
+            <ul>
+                <li><a href="https://plus.google.com/u/0/+JoseAnnunziato/posts" target="_blank">Professor Video</a></li>
+            </ul>
+        </div>
+    
+    
+    
+    <script src="/home/mani89/javascript/jquery-1.11.1.js"></script>
+    <script src="/home/mani89/javascript/bootstrap.min.js"></script>
+    <script src="/home/mani89/javascript/angular.js"></script>
+</body>
+</html>
